@@ -12,21 +12,24 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --black: #0a0a0a;
-    --white: #f5f2ee;
-    --cream: #ede9e3;
-    --accent: #c8b89a;
-    --mid: #6b6560;
-    --thin: 1px solid rgba(100,95,90,0.2);
+    --black: #111111;
+    --white: #e8e6e1;
+    --cream: #dddbd6;
+    --accent: #E8431A;
+    --accent2: #E8431A;
+    --accent-dim: rgba(232,67,26,0.08);
+    --mid: #555555;
+    --warm: #f0ede8;
+    --thin: 1px solid rgba(0,0,0,0.1);
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--white);
+    background: #f0eeea;
     color: var(--black);
     font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
     cursor: none;
   }
@@ -34,7 +37,7 @@
   /* Custom cursor */
   .cursor {
     width: 8px; height: 8px;
-    background: var(--black);
+    background: var(--accent);
     border-radius: 50%;
     position: fixed;
     top: 0; left: 0;
@@ -43,15 +46,7 @@
     transition: transform 0.15s ease;
   }
   .cursor-ring {
-    width: 32px; height: 32px;
-    border: 1px solid var(--black);
-    border-radius: 50%;
-    position: fixed;
-    top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transition: all 0.25s ease;
-    transform: translate(-12px, -12px);
+    display: none;
   }
   body:hover .cursor { opacity: 1; }
 
@@ -71,7 +66,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     letter-spacing: 0.12em;
-    color: var(--black);
+    color: var(--accent);
     text-decoration: none;
   }
 
@@ -90,7 +85,7 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--black); }
+  .nav-links a:hover { color: var(--accent); }
 
   /* Hero */
   .hero {
@@ -133,6 +128,10 @@
     color: var(--accent);
   }
 
+  .series-tagline span {
+    color: var(--accent);
+  }
+
   .hero-bio {
     font-size: 16px;
     line-height: 1.7;
@@ -150,9 +149,9 @@
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--accent);
     padding-bottom: 4px;
     width: fit-content;
     opacity: 0;
@@ -185,6 +184,7 @@
     letter-spacing: 0.04em;
     line-height: 1;
     margin-bottom: 8px;
+    color: var(--accent);
   }
 
   .stat-label {
@@ -216,6 +216,7 @@
     font-size: clamp(36px, 5vw, 64px);
     letter-spacing: 0.04em;
     line-height: 1;
+    color: var(--accent);
   }
 
   /* Series section */
@@ -238,7 +239,7 @@
     letter-spacing: 0.03em;
   }
 
-  .series-tagline span { color: var(--accent); }
+  
 
   .series-desc {
     font-size: 15px;
@@ -263,12 +264,12 @@
     transition: background 0.3s;
   }
 
-  .episode-card:hover { background: var(--cream); }
+  .episode-card:hover { background: var(--accent-dim); }
 
   .episode-num {
     font-size: 11px;
     letter-spacing: 0.2em;
-    color: var(--accent);
+    color: var(--mid);
     text-transform: uppercase;
     margin-bottom: 16px;
   }
@@ -278,6 +279,7 @@
     font-size: 28px;
     letter-spacing: 0.04em;
     margin-bottom: 4px;
+    color: var(--accent);
   }
 
   .episode-role {
@@ -344,6 +346,7 @@
     font-size: 28px;
     letter-spacing: 0.04em;
     margin-bottom: 8px;
+    color: var(--black);
   }
 
   .work-title {
@@ -365,7 +368,7 @@
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--mid);
     padding-top: 6px;
     text-align: right;
   }
@@ -388,13 +391,13 @@
     transition: background 0.3s;
   }
 
-  .skill-block:hover { background: var(--cream); }
+  .skill-block:hover { background: var(--accent-dim); }
 
   .skill-category {
     font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--mid);
     margin-bottom: 20px;
   }
 
@@ -455,7 +458,7 @@
     transition: border-color 0.2s;
   }
 
-  .contact-value:hover { border-color: var(--black); }
+  .contact-value:hover { border-color: var(--accent); color: var(--accent); }
 
   /* Footer */
   footer {
@@ -469,6 +472,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
     letter-spacing: 0.12em;
+    color: var(--accent);
   }
 
   .footer-copy {
