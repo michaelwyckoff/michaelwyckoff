@@ -36,7 +36,7 @@
 
   /* Custom cursor */
   .cursor {
-    width: 12px; height: 12px;
+    width: 8px; height: 8px;
     background: var(--accent);
     border-radius: 50%;
     position: fixed;
@@ -393,6 +393,96 @@
   /* Skills */
   .skills-section { padding-bottom: 80px; }
 
+  /* Work Samples */
+  .samples-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 48px 48px 32px;
+    border-top: var(--thin);
+  }
+
+  .samples-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+
+  .samples-grid {
+    padding: 0 48px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .sample-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sample-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  .sample-company {
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .sample-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sample-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #1a1a1a;
+  }
+
+  .sample-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+
+  .sample-thumb:hover img { opacity: 0.7; }
+
+  .sample-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .sample-thumb:hover .sample-play { opacity: 1; }
+
+  .sample-cta {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    width: fit-content;
+  }
+
   .skills-grid {
     padding: 0 48px;
     display: grid;
@@ -543,8 +633,7 @@
 <nav>
   <a href="#" class="nav-logo">MW</a>
   <ul class="nav-links">
-    <li><a href="#series">Series</a></li>
-    <li><a href="#work">Work</a></li>
+    <li><a href="#work">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -555,8 +644,8 @@
   <div class="hero-left">
     <p class="hero-label">Media & Marketing — San Francisco</p>
     <h1 class="hero-name">Michael<span>Wyckoff.</span></h1>
-    <p class="hero-bio">I build content that drives engagement, grows audiences, and delivers business results. Currently creating <em>One Thing</em> — a series picking the minds of high performing individuals.</p>
-    <a href="#series" class="hero-cta">View the work →</a>
+    <p class="hero-bio">I build content that drives engagement, grows audiences, and delivers real business results. Short-form strategist with a track record of building high-performing media engines from the ground up.</p>
+    <a href="#work" class="hero-cta">View the work →</a>
   </div>
   <div class="hero-right">
     <div class="hero-stat">
@@ -570,8 +659,8 @@
   </div>
 </section>
 
-<!-- SERIES -->
-<section class="series reveal" id="series">
+<!-- SERIES - HIDDEN -->
+<section class="series reveal" id="series" style="display:none;">
   <div class="section-header">
     <span class="section-num">01</span>
     <h2 class="section-title">One Thing</h2>
@@ -590,9 +679,9 @@
     </div>
     <div class="episode-card">
       <div class="episode-num">Episode 02</div>
-      <div class="episode-guest">Brian Doughty</div>
-      <div class="episode-role">Jewelery Store Owner — Napa, CA</div>
-      <div class="episode-quote">"Follow Your Dreams."</div>
+      <div class="episode-guest">Coming Soon</div>
+      <div class="episode-role">Chef — Napa, CA</div>
+      <div class="episode-quote">Their one thing, revealed.</div>
       <a href="#" class="episode-link">Follow for updates →</a>
     </div>
     <div class="episode-card">
@@ -628,7 +717,7 @@
         <div class="work-company">Preferabli</div>
         <div class="work-title">Media Team Manager</div>
         <p class="work-desc">Produced and hosted anchor interview series generating 5M+ organic views on Instagram. Owned content calendar and publishing workflow across Instagram, TikTok, podcast, and weekly newsletter. Designed and produced weekly newsletter driving leads, partner marketing, and app downloads.</p>
-        <a href="https://www.instagram.com/reel/DKLAzyFua7P/" target="_blank" class="work-link">Watch on Instagram →</a>
+        <a href="https://www.instagram.com/p/DKLAzyFua7P/" target="_blank" class="work-link">Watch on Instagram →</a>
       </div>
       <div class="work-tag">Full Time</div>
     </div>
